@@ -43,6 +43,7 @@ set smartcase
 
 " show line numbers.
 set number
+set rnu
 
 " show cursor position
 set ruler
@@ -120,6 +121,12 @@ nnoremap <C-l> <C-w>l
 " use tab to jump between blocks
 nnoremap <tab> %
 vnoremap <tab> %
+
+"  automatically set current diretory to the directory of last opened fie
+set autochdir
+
+" enable mouse mode
+set mouse+=a
 
 " Map Ctrl + S to save in any mode
 nnoremap <silent> <C-s> :update<CR>
@@ -200,19 +207,21 @@ Plug 'wincent/command-t'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', {'on' : 'NERDTreeToggle'}
-
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " NERDTree Settings
 
 let g:NERDTreeDirArrows=0
 " close NERDTree after a file is opened
+
 let g:NERDTreeQuitOnOpen=0
 " show hidden file in NERDTree
+
 let NERDTreeShowHidden=1
 " Toggle NERDTree 
-nmap <silent> <leader>k :NERDTreeToggle<cr>
-nmap <silent> <leader>y :NERDTreeFind<cr>
+nmap <silent> <leader>n :NERDTreeToggle<cr>
+nmap <silent> <leader>f :NERDTreeFind<cr>
 
 "CtrlP Settings
 nmap <silent> <leader>r :CtrlPBuffer<cr>

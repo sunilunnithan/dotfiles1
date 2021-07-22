@@ -1,0 +1,65 @@
+# install.conf.yaml
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    # Shell stuff
+    ~/.vimrc: vim/vimrc
+    ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
+    ~/.config/nvim:
+      path: nvim
+      force: true
+
+    ~/.zshrc:
+      path: zsh/zshrc.zsh
+      force: true
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+    ~/.asdf: zsh/asdf
+
+    ~/.bashrc:
+      path: bash/bashrc
+      force: true
+
+    ~/.tmux/plugins:
+      path: tmux/plugins
+      force: true
+
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
+      force: true
+
+    ~/bin:
+      glob: true
+      path: scripts/*
+      relink: true
+
+    # VS Code Linux
+    ~/.config/Code/User:
+      if: '[[ `uname` = Linux ]]'
+      glob: true
+      path: vscode/linux/*.json
+      force: true
+
+    # VS Code MacOS
+    ~/Library/Application Support/Code/User:
+      if: '[ `uname` = Darwin ]'
+      glob: true
+      path: vscode/macos/*.json
+      force: true
+
+    # Linters
+    ~/.eslintrc: linters/.eslintrc
+
+    # Git
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore
+
+    # Apps
+
