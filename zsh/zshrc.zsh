@@ -41,6 +41,7 @@ antigen bundle rsync
 antigen bundle systemadmin
 antigen bundle systemd
 antigen bundle djui/alias-tips
+antigen bundle lukechilds/zsh-nvm
 
 
 
