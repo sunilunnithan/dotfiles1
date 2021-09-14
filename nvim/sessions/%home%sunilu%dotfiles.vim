@@ -8,18 +8,18 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 tmux/tmux.conf
+badd +105 zsh/zshrc.zsh
 argglobal
 %argdel
-$argadd tmux/tmux.conf
-edit tmux/tmux.conf
+$argadd zsh/zshrc.zsh
+edit zsh/zshrc.zsh
 argglobal
-let s:l = 173 - ((44 * winheight(0) + 26) / 52)
+let s:l = 105 - ((26 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 173
-normal! 0
+keepjumps 105
+normal! 026|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

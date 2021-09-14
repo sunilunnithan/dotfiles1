@@ -29,6 +29,7 @@ antigen bundle tmux
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 antigen bundle z
 antigen bundle command-not-found
 antigen bundle common-aliases
@@ -42,11 +43,13 @@ antigen bundle systemadmin
 antigen bundle systemd
 antigen bundle djui/alias-tips
 antigen bundle lukechilds/zsh-nvm
+antigen bundle fd
+
 
 
 
 #jvm
-antigen bundle gradel
+antigen bundle gradle
 antigen bundle scala
 antigen bundle sbt
 antigen bundle spring
@@ -98,7 +101,9 @@ antigen bundle redis-cli
 antigen bundle terraform
 antigen bundle fuck
 antigen bundle vagrant
-antigen bundle asdf
+antigen bundle ripgrep
+antigen bundle systemadmin
+
 
 
 # Do OS dependant stuff
@@ -193,5 +198,5 @@ if [ `uname` = Darwin ]; then
   export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 fi
 
-source ~/.asdf/asdf.sh
-source ~/.asdf/completions/asdf.bash
+
+#eval "$(starship init zsh)"

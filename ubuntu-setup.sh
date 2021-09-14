@@ -100,11 +100,31 @@ fancy_echo "Install python utilities..."
   sudo aptitude install -y python
   sudo aptitude install -y python3-distutils
 
+  
+fancy_echo "Installing modern unix toosl"
+  sudo aptitude install -y fd-find ripgrep htop colordiff bat ncdu silversearcher-ag
+
+
+fancy_echo "Installing pipx"
+  python3 -m pip install --user pipx
+  python3 -m pipx ensurepath
+  python3 -m pip install --user -U pipx
+
+
+fancy_echo "Install python tools using pipx"
+  pipx install httpie 
+  pipx install pgcli 
+  pipx install glances
+
+fancy_echo "Installing nodejs tools"
+  npm install -g tldr gtop 
+  
+fancy_echo "install rust based tools"
+  sudo snap install duf-utility
+
 fancy_echo "Installing dotnet sdk & tools"
   sudo snap install dotnet-sdk --classic
   sudo snap install powershell --classic
-
-
 
 ### end linux-components/debian-derivative-packages
 
@@ -113,3 +133,7 @@ fancy_echo "Setup dotfiles ..."
 
 fancy_echo "Changing your shell to zsh ..."
   #chsh -s $(which zsh)
+
+fancy_echo "Installing starfish prompt ..."
+  sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
