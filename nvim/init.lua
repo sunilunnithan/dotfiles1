@@ -1,4 +1,3 @@
--- Map leader to space
 vim.g.mapleader = ' '
 
 local fn = vim.fn
@@ -27,4 +26,5 @@ R('settings')
 -- Key mappings
 R('keymappings')
 
-
+-- LSP
+--R('config.lsp').setup()

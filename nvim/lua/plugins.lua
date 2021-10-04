@@ -50,25 +50,21 @@ return require('packer').startup(function()
 
     use {'sindrets/diffview.nvim'}
     use {'unblevable/quick-scope'}
-    -- use {'voldikss/vim-floaterm'}
     use {
         'folke/which-key.nvim',
-        config = function() require("which-key").setup {} end
+        config = function()
+           require("which-key").setup { }
+        end
     }
     use {'chrisbra/NrrwRgn'}
     use {
         'windwp/nvim-spectre',
         config = function() require("config.spectre") end
+    -- use {'voldikss/vim-floaterm'}
     }
     use {
         'ruifm/gitlinker.nvim',
         config = function() require("gitlinker").setup() end
-    }
-    use {
-        "folke/persistence.nvim",
-        event = "BufReadPre",
-        module = "persistence",
-        config = function() require("persistence").setup() end
     }
     use {
         'windwp/nvim-autopairs',
@@ -131,8 +127,7 @@ return require('packer').startup(function()
         end
     }
 
-    -- Dashboard
-    use {'glepnir/dashboard-nvim'}
+    use {'mhinz/vim-startify'}
 
     -- Snippets
     use {'cstrap/python-snippets'}
@@ -144,9 +139,6 @@ return require('packer').startup(function()
         'hrsh7th/vim-vsnip',
         'rafamadriz/friendly-snippets',
       }
-
-
-
 
     use {'szw/vim-maximizer'}
     use {'dyng/ctrlsf.vim'}
@@ -190,7 +182,6 @@ return require('packer').startup(function()
     config = function()
         require("zen-mode").setup {
             window = {
-
                 width = 240
             }
         }
@@ -209,6 +200,10 @@ return require('packer').startup(function()
           config = function() require('config.neoterm') end
        }
     use { 'norcalli/nvim-terminal.lua' }
+
+    use { 'neovim/nvim-lspconfig',
+          config = function() require('config.lspconfig') end
+   }
 
 
 end)

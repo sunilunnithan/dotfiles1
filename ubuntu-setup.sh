@@ -100,6 +100,8 @@ fancy_echo "Install python utilities..."
   sudo aptitude install -y python
   sudo aptitude install -y python3-distutils
 
+fancy_echo "Install sqlite ..."
+  sudo apt install sqlite3:
   
 fancy_echo "Installing modern unix toosl"
   sudo aptitude install -y fd-find ripgrep htop colordiff bat ncdu silversearcher-ag
