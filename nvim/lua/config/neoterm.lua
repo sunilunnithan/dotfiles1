@@ -12,7 +12,7 @@ g.neoterm_use_relative_path = true
 
 
 utils.map('n', '<Leader>tt', ':Ttoggle<CR>')
-utils.map('i', '<Leader>tt', ':Ttoggle<CR>')
+-- utils.map('i', '<Leader>tt', ':Ttoggle<CR>')
 utils.map('t', '<Leader>tt', '<c-\\><c-n>:Ttoggle<CR>')
 utils.map('n', '<Leader>tx', ':TREPLSendLine<CR>')
 utils.map('v', '<Leader>tx', ':TREPLSendSelection<CR>')

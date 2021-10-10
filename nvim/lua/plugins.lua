@@ -50,12 +50,7 @@ return require('packer').startup(function()
 
     use {'sindrets/diffview.nvim'}
     use {'unblevable/quick-scope'}
-    use {
-        'folke/which-key.nvim',
-        config = function()
-           require("which-key").setup { }
-        end
-    }
+    use { 'folke/which-key.nvim' }
     use {'chrisbra/NrrwRgn'}
     use {
         'windwp/nvim-spectre',
@@ -205,7 +200,16 @@ return require('packer').startup(function()
           config = function() require('config.lspconfig') end
    }
 
+   -- Lua
+   use {
+   "folke/twilight.nvim",
+   config = function()
+      require("twilight").setup {
+         -- or leave it empty to use the default settings
+      }
+   end
+   }
+
 
 end)
-
 
