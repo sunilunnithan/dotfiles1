@@ -21,18 +21,21 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', 'gA', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', 'e', '<cmd>lua vim.lsp.diagnostic.sho_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', 'gF', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 local servers = { 'pyright', 'rust_analyzer', 'tsserver' , 'angularls', 'ansiblels', 'bashls', 'clangd', 'cmake', 'csharp_ls','cssls','dockerls','gopls','groovyls','html','java_language_server','jsonls','powershell_es','sqlls','sumneoko_lua','terraformls','vimls', 'yamlls'}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     flags = {
       debounce_text_changes = 150,
     }
