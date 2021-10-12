@@ -129,8 +129,24 @@ fancy_echo "Installing nodejs tools"
   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt install -y nodejs
   sudo npm install -g npm
+  sudo npm install -g yarn
   sudo npm install -g tldr gtop 
   
+
+fancy_echo "Install languauge server"
+  sudo npm install -g @angular/language-server
+  sudo yarn global add ansible-language-server
+  sudo npm install -g bash-language-server
+  sudo npm install -g vscode-langservers-extracted
+  sudo npm install -g dockerfile-language-server-nodejs
+  sudo npm install -g sql-language-server
+  sudo npm install -g typescript typescript-language-server vim-language-server
+  sudo yarn global add yaml-language-server
+
+  GO111MODULE=on go get golang.org/x/tools/gopls@latest
+  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+  sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+  sudo apt-get update && sudo apt-get install terraform-ls
 
 fancy_echo "Install Rust tools"
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -173,4 +189,4 @@ fancy_echo "install rust based tools"
 fancy_echo "Installing dotnet sdk & tools"
   sudo snap install dotnet-sdk --classic
   sudo snap install powershell --classic
-  
+  sudo dotnet tool install --global csharp-ls 
