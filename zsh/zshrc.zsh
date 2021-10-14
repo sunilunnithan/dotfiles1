@@ -30,6 +30,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
+antigen bundle zsh_reload
 antigen bundle z
 antigen bundle command-not-found
 antigen bundle common-aliases
@@ -44,6 +45,17 @@ antigen bundle systemd
 antigen bundle djui/alias-tips
 antigen bundle lukechilds/zsh-nvm
 antigen bundle fd
+antigen bundle copydir
+antigen bundle copyfile
+antigen bundle encode64
+antigen bundle last-working-dir
+antigen bundle web-search
+antigen bundle safe-paste
+antigen bundle copybuffer
+antigen bundle vi-mode
+antigen bundle dirhistory
+
+
 
 
 
@@ -102,7 +114,6 @@ antigen bundle terraform
 antigen bundle fuck
 antigen bundle vagrant
 antigen bundle ripgrep
-antigen bundle systemadmin
 
 
 

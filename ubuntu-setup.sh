@@ -178,10 +178,11 @@ fancy_echo "Setup dotfiles ..."
   make install
 
 fancy_echo "Changing your shell to zsh ..."
-  chsh -s $(which zsh)
+  sudo chsh -s "$(which zsh)"
+
 
 fancy_echo "Installing starfish prompt ..."
-  sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+  sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 fancy_echo "install rust based tools"
   sudo snap install duf-utility
@@ -190,3 +191,11 @@ fancy_echo "Installing dotnet sdk & tools"
   sudo snap install dotnet-sdk --classic
   sudo snap install powershell --classic
   sudo dotnet tool install --global csharp-ls 
+
+fancy_echo "Installing tmux plugins"
+  export TMUX_PLUGIN_MANAGER_PATH="${HOME}/.tmux/plugins" 
+  "${HOME}/.tmux/plugins/tpm/bin/install_plugins"
+
+fancy_echo "Install Neovim Plugins"
+  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
