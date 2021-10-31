@@ -210,9 +210,13 @@ return require('packer').startup(function()
          'hrsh7th/cmp-nvim-lua',
          'f3fora/cmp-spell',
          'onsails/lspkind-nvim',
-         -- snippets
+         'petertriho/cmp-git',
+         'andersevenrud/compe-tmux',
+         'David-Kunz/cmp-npm',
+         'tamago324/cmp-zsh',
          'L3MON4D3/LuaSnip',
          'saadparwaiz1/cmp_luasnip',
+
       },
       config = function() require('config.cmp') end
    })
@@ -226,6 +230,16 @@ return require('packer').startup(function()
       }
    end
    }
+
+   --   :Vista  <-- Opens up a really cool sidebar with info about file.
+   use { "liuchengxu/vista.vim", cmd = "Vista" }
+
+   -- tmux
+   use 'christoomey/vim-tmux-navigator'
+   -- use 'christoomey/vim-tmux-runner'
+   use 'preservim/vimux'
+
+   --snippets
 
 
 end)
