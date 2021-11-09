@@ -11,13 +11,30 @@ wk.setup({ show_help = false, triggers = "auto", plugins = { spelling = true }, 
 utils.map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
 utils.map('i', 'jk', '<Esc>') -- jk to escape
 utils.map('i', 'kj', '<Esc>') -- jk to escape
-utils.map('n', '<Leader>tt', '<Cmd>15sp +term<CR>')
 utils.map('n', '<Leader>w', '<Cmd>update<CR>')
-utils.map('n', '<Leader>tr', '<Cmd>NvimTreeToggle<CR>')
-utils.map('n', '<Leader>tf', '<Cmd>NvimTreeFindFile<CR>')
+
 utils.map('n', '<Leader>m', ':MaximizerToggle!<CR>')
 utils.map('n', '<Leader>so', ':source %<CR>')
 utils.map('n', '<Leader>lu', ':luafile %<CR>')
+
+utils.map('n', '<Leader>tr', '<Cmd>NvimTreeToggle<CR>')
+utils.map('n', '<Leader>tt', '<Cmd>15sp +term<CR>')
+utils.map('n', '<Leader>tf', '<Cmd>NvimTreeFindFile<CR>')
+utils.map('n', '<Leader>t-', ':VtrOpenRunner { "orientation": "v", "percentage": 30 }<cr>')
+utils.map('n', '<Leader>t|', ':VtrOpenRunner { "orientation": "h", "percentage": 30 }<cr>')
+utils.map('n', '<Leader>tk', ':VtrKillRunner<cr>')
+utils.map('n', '<Leader>t0', ':VtrAttachToPane 0<cr>:call system("tmux clock-mode -t 0 && sleep 0.1 && tmux send-keys -t 0 q")<cr>')
+utils.map('n', '<Leader>t1', ':VtrAttachToPane 1<cr>:call system("tmux clock-mode -t 1 && sleep 0.1 && tmux send-keys -t 1 q")<cr>')
+utils.map('n', '<Leader>t2', ':VtrAttachToPane 2<cr>:call system("tmux clock-mode -t 2 && sleep 0.1 && tmux send-keys -t 2 q")<cr>')
+utils.map('n', '<Leader>t3', ':VtrAttachToPane 3<cr>:call system("tmux clock-mode -t 3 && sleep 0.1 && tmux send-keys -t 3 q")<cr>')
+utils.map('n', '<Leader>t4', ':VtrAttachToPane 4<cr>:call system("tmux clock-mode -t 4 && sleep 0.1 && tmux send-keys -t 4 q")<cr>')
+utils.map('n', '<Leader>t5', ':VtrAttachToPane 5<cr>:call system("tmux clock-mode -t 5 && sleep 0.1 && tmux send-keys -t 5 q")<cr>')
+utils.map('n', '<Leader>to', ':VtrFocusRunner<cr>')
+utils.map('n', '<Leader>tl', ':VtrSendLinesToRunner<cr>')
+utils.map('n', '<Leader>tq', ':VtrSendKeysRaw q<cr>')
+utils.map('n', '<Leader>tc', ':VtrSendKeysRaw ^C<cr>')
+utils.map('n', '<Leader>ts', ':VtrSendCommandToRunner<space>')
+
 
 utils.map('t', '<Leader>m', '<C-\\><C-n> :MaximizerToggle!<CR>')
 utils.map('t', '<C-h>', '<C-\\><C-n><C-w>h')

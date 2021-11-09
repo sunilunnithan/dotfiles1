@@ -3,8 +3,6 @@ return require('packer').startup(function()
     -- Packer can manage itself as an optional plugin
     use {'wbthomason/packer.nvim', opt = true}
 
-    -- Development
-    use {'tpope/vim-dispatch'}
 
     -- Git
     use {
@@ -236,8 +234,7 @@ return require('packer').startup(function()
 
    -- tmux
    use 'christoomey/vim-tmux-navigator'
-   -- use 'christoomey/vim-tmux-runner'
-   use 'preservim/vimux'
+   use 'christoomey/vim-tmux-runner'
 
    --snippets
 
