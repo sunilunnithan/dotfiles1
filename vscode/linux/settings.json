@@ -1,0 +1,76 @@
+{
+  "team.showWelcomeMessage": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "python.languageServer": "Pylance",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.linux": "/home/sunilu/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vscode-kubernetes.helm-path.linux": "/home/sunilu/.vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\sunil\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+    "vscode-kubernetes.helm-path.windows": "C:\\Users\\sunil\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
+  },
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.sideBar.location": "right",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.leader": "<Space>",
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.smartRelativeLine": true,
+  "vim.visualstar": true,
+  "vim.neovimUseConfigFile": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<leader>", "`"],
+      "commands" : [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<ESC>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<ESC>"]
+    }
+  ],
+  "redhat.telemetry.enabled": true
+}

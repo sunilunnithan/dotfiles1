@@ -1,53 +1,5 @@
-// Place your key bindings in this file to overwrite the defaults
+// Place your key bindings in this file to override the defaults
 [
-  {
-    "key": "ctrl+,",
-    "command": "workbench.action.openGlobalSettings"
-  },
-  {
-    "key": "ctrl+.",
-    "command": "workbench.action.openGlobalKeybindings"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "editor.action.deleteLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "expandLineSelection",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+down",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+up",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+d",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "expandLineSelection",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+k",
-    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
-    "when": "editorTextFocus"
-  },
   {
     "key": "alt+;",
     "command": "workbench.action.terminal.focus",
@@ -57,5 +9,102 @@
     "key": "alt+;",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorFocus"
+  },
+
+  {
+    "key": "alt+k",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.focusAboveGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "-toggleFindInSelection",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorFocus"
+  },
+
+  {
+    "key": "alt+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+b",
+    "command": "workbench.action.toggleActivityBarVisibility",
+    "when": "editorFocus"
+  },
+
+  {
+    "key": "alt+s",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+s",
+    "command": "workbench.action.splitEditor",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+v",
+    "command": "workbench.action.splitEditorOrthogonal",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+
+  {
+    "key": "alt+p",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+z",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "alt+r",
+    "command": "editor.action.showContextMenu"
   }
 ]
